@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">1234</property>
+        <property name="show_sql">true</property>
+        <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <mapping class="ru.sapteh.models.Cargo"/>
+        <mapping class="ru.sapteh.models.CargoType"/>
+        <mapping class="ru.sapteh.models.Client"/>
+        <mapping class="ru.sapteh.models.Consignee"/>
+        <mapping class="ru.sapteh.models.IdTransport"/>
+        <mapping class="ru.sapteh.models.Drivers"/>
+        <mapping class="ru.sapteh.models.Invoice"/>
+        <mapping class="ru.sapteh.models.Managers"/>
+        <mapping class="ru.sapteh.models.License"/>
+        <mapping class="ru.sapteh.models.Mechanics"/>
+        <mapping class="ru.sapteh.models.Orders"/>
+        <mapping class="ru.sapteh.models.Schedule"/>
+        <mapping class="ru.sapteh.models.Trailer"/>
+        <mapping class="ru.sapteh.models.TrailerType"/>
+        <mapping class="ru.sapteh.models.Transport"/>
+        <mapping class="ru.sapteh.models.TransportType"/>
+        <mapping class="ru.sapteh.models.Waybill"/>
+    </session-factory>
+</hibernate-configuration>

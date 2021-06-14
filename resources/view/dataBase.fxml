@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="756.0" prefWidth="1037.0" style="-fx-background-color: #461bf2;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.sapteh.controllers.DataBaseController">
+   <children>
+      <TabPane layoutX="-1.0" layoutY="14.0" prefHeight="690.0" prefWidth="1037.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Заказы">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #a9ebdf;">
+                     <children>
+                        <TableView fx:id="ordersTab" layoutX="14.0" layoutY="14.0" prefHeight="601.0" prefWidth="1007.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="idOrderColumn" prefWidth="32.0" text="№" />
+                            <TableColumn fx:id="addressOrderColumn" prefWidth="295.0" text="Адресс" />
+                              <TableColumn fx:id="distanceOrderColumn" prefWidth="77.0" text="Расстояние" />
+                              <TableColumn fx:id="daеуOrderColumn" prefWidth="95.0" text="Дата отправки" />
+                              <TableColumn fx:id="driverOrderColumn" prefWidth="154.0" text="Водитель" />
+                              <TableColumn fx:id="tranportOrderColumn" prefWidth="81.0" text="Транспорт" />
+                              <TableColumn fx:id="trailerOrderColumn" prefWidth="76.0" text="Прицеп" />
+                              <TableColumn fx:id="managerOrderColumn" prefWidth="132.0" text="Менеджер" />
+                              <TableColumn fx:id="costOrderColumn" prefWidth="64.0" text="Цена" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="buttonOrderEdit" layoutX="863.0" layoutY="635.0" mnemonicParsing="false" onAction="#actionOrderEdit" text="Изменить" />
+                        <Button layoutX="933.0" layoutY="635.0" mnemonicParsing="false" onAction="#actionOrderDelete" text="Удалить" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Клиенты">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="652.0" prefWidth="1007.0" style="-fx-background-color: #a9ebdf;">
+                     <children>
+                        <TableView fx:id="ClientTab" prefHeight="607.0" prefWidth="1007.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="idClientColumn" prefWidth="50.0" text="№" />
+                            <TableColumn fx:id="fioClientColumn" prefWidth="503.0" text="ФИО" />
+                              <TableColumn fx:id="phoneClientColumn" prefWidth="184.0" text="Телефон" />
+                              <TableColumn fx:id="emailClientColumn" prefWidth="269.0" text="Email" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="buttonCreateClient" layoutX="469.0" layoutY="619.0" mnemonicParsing="false" onAction="#actionCreateClient" text="Добавить" />
+                        <Button fx:id="buttonEditClient" layoutX="863.0" layoutY="632.0" mnemonicParsing="false" onAction="#actionEditClient" text="Изменить" />
+                        <Button layoutX="933.0" layoutY="632.0" mnemonicParsing="false" onAction="#actionDeleteClient" text="Удалить" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Грузополучатели">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #a9ebdf;">
+                     <children>
+                        <TableView fx:id="consigneeTab" prefHeight="200.0" prefWidth="704.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="idConsColumn" prefWidth="35.0" text="№" />
+                            <TableColumn fx:id="fioConsColumn" prefWidth="562.0" text="ФИО" />
+                              <TableColumn fx:id="phoneConsColumn" prefWidth="190.0" text="Телефон" />
+                              <TableColumn fx:id="emailConsColumn" prefWidth="249.0" text="Email" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="buttonCreateCons" layoutX="469.0" layoutY="623.0" mnemonicParsing="false" onAction="#actionCreateCons" text="Добавить" />
+                        <Button fx:id="buttonEditCons" layoutX="862.0" layoutY="635.0" mnemonicParsing="false" onAction="#actionEditCons" text="Обновить" />
+                        <Button layoutX="933.0" layoutY="635.0" mnemonicParsing="false" onAction="#actionCons" text="Удалить" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Водители">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #a9ebdf;">
+                     <children>
+                        <TableView fx:id="DriverTab" prefHeight="596.0" prefWidth="1007.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="idDriverColumn" prefWidth="31.0" text="№" />
+                            <TableColumn fx:id="fioDriverColumn" prefWidth="373.0" text="ФИО" />
+                              <TableColumn fx:id="phoneDriverColumn" prefWidth="145.0" text="Телефон" />
+                              <TableColumn fx:id="emailDriverColumn" minWidth="0.0" prefWidth="194.0" text="Email" />
+                              <TableColumn fx:id="licenseDriverColumn" maxWidth="593.0" prefWidth="263.0" text="Водительское удостоверение" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="buttonCreateDriver" layoutX="469.0" layoutY="623.0" mnemonicParsing="false" onAction="#actionCreateDriver" text="Добавить" />
+                        <Button fx:id="buttonEditDriver" layoutX="863.0" layoutY="635.0" mnemonicParsing="false" onAction="#actionEditColumn" text="Изменить" />
+                        <Button layoutX="933.0" layoutY="635.0" mnemonicParsing="false" onAction="#actionDeleteDriver" text="Удалить" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Транспорт">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #a9ebdf;">
+                     <children>
+                        <TableView fx:id="transportTab" prefHeight="200.0" prefWidth="1007.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="idTSColumn" prefWidth="33.0" text="№" />
+                            <TableColumn fx:id="markTSColumn" prefWidth="215.0" text="Марка" />
+                              <TableColumn fx:id="typeTSColumn" prefWidth="88.0" text="Тип автомобиля" />
+                              <TableColumn fx:id="ptsTSColumn" prefWidth="167.0" text="ПТС" />
+                              <TableColumn fx:id="photoTSColumn" prefWidth="307.0" text="Фото" />
+                              <TableColumn fx:id="dateTOTSColumn" prefWidth="89.0" text="Дата посл. ТО" />
+                              <TableColumn fx:id="fuelTSColumn" prefWidth="107.0" text="Расход топлива" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="buttonCreateTS" layoutX="469.0" layoutY="615.0" mnemonicParsing="false" onAction="#actionCreateTS" text="Добавить" />
+                        <Button layoutX="863.0" layoutY="627.0" mnemonicParsing="false" onAction="#actionEditTS" text="Изменить" />
+                        <Button layoutX="933.0" layoutY="627.0" mnemonicParsing="false" onAction="#actionDeleteTS" text="Удалить" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Прицепы">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #a9ebdf;">
+                     <children>
+                        <TableView fx:id="trailerTab" prefHeight="419.0" prefWidth="1007.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="idTrailerColumn" prefWidth="35.0" text="№" />
+                            <TableColumn fx:id="markTrailerColumn" prefWidth="294.0" text="Марка" />
+                              <TableColumn fx:id="typeTrailerColumn" prefWidth="358.0" text="Тип прицепа" />
+                              <TableColumn fx:id="numberTrailerColumn" prefWidth="195.0" text="Гос. номер" />
+                              <TableColumn fx:id="garNumberTrailerColumn" prefWidth="124.0" text="Гар. номер" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="469.0" layoutY="623.0" mnemonicParsing="false" onAction="#actionCreateTrailer" text="Добавить" />
+                        <Button layoutX="863.0" layoutY="635.0" mnemonicParsing="false" onAction="#actionEditTrailer" text="Изменить" />
+                        <Button layoutX="933.0" layoutY="635.0" mnemonicParsing="false" onAction="#deleteTrailer" text="Удалить" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Грузы">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #a9ebdf;">
+                     <children>
+                        <TableView fx:id="cargoTab" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="idCargoColumn" prefWidth="44.0" text="№" />
+                            <TableColumn fx:id="nameCargoColumn" prefWidth="301.0" text="Название" />
+                              <TableColumn fx:id="typeCargoColumn" prefWidth="185.0" text="Тип груза" />
+                              <TableColumn fx:id="weightCargoColumn" prefWidth="59.0" text="Вес в кг." />
+                              <TableColumn fx:id="gabCargoColumn" prefWidth="183.0" text="Габариты (шир, выс, длинна)" />
+                              <TableColumn fx:id="quantityCargoColumn" prefWidth="74.0" text="Количество" />
+                              <TableColumn fx:id="packageCargoColumn" prefWidth="108.0" text="Упаковка" />
+                              <TableColumn fx:id="costCargoColumn" prefWidth="52.0" text="Цена" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="863.0" layoutY="629.0" mnemonicParsing="false" onAction="#editCargo" text="Изменить" />
+                        <Button layoutX="933.0" layoutY="629.0" mnemonicParsing="false" onAction="#deleteCargo" text="Удалить" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Механики">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #a9ebdf;">
+                     <children>
+                        <TableView fx:id="mechanicsTab" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="idMechanicColumn" prefWidth="46.0" text="№" />
+                            <TableColumn fx:id="fioMechanicColumn" prefWidth="251.0" text="ФИО" />
+                              <TableColumn fx:id="phoneMechanicColumn" prefWidth="126.0" text="Телефон" />
+                              <TableColumn fx:id="emailMechanicColumn" prefWidth="163.0" text="Email" />
+                              <TableColumn fx:id="addressMechanicColumn" prefWidth="420.0" text="Место проживания" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="469.0" layoutY="627.0" mnemonicParsing="false" onAction="#createMechanic" text="Добавить" />
+                        <Button layoutX="863.0" layoutY="627.0" mnemonicParsing="false" onAction="#editMechanic" text="Изменить" />
+                        <Button layoutX="933.0" layoutY="627.0" mnemonicParsing="false" onAction="#deleteMechanic" text="Удалить" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Водительские удостоверения">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="licenseColumn" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="idColumn" prefWidth="47.0" text="№" />
+                            <TableColumn fx:id="seriesNumberColumn" prefWidth="285.0" text="Серия и номер" />
+                              <TableColumn fx:id="categoryColumn" prefWidth="93.0" text="Категории" />
+                              <TableColumn fx:id="dateIssueColumn" prefWidth="162.0" text="Дата получения" />
+                              <TableColumn fx:id="endDateColumn" prefWidth="87.0" text="Годен до" />
+                              <TableColumn fx:id="gibddColumn" prefWidth="131.0" text="ГИБДД" />
+                              <TableColumn fx:id="placeIssue" prefWidth="231.0" text="Место получения" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="buttonCreateLicense" layoutX="484.0" layoutY="622.0" mnemonicParsing="false" onAction="#createLicense" text="Добавить" />
+                        <Button layoutX="885.0" layoutY="622.0" mnemonicParsing="false" onAction="#editLicense" text="Изменить" />
+                        <Button layoutX="963.0" layoutY="622.0" mnemonicParsing="false" onAction="#deleteLicense" text="Удалить" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="buttonExit" layoutX="14.0" layoutY="717.0" mnemonicParsing="false" onAction="#actionExit" text="Назад" />
+   </children>
+</AnchorPane>
